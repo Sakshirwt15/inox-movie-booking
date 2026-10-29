@@ -23,7 +23,7 @@ const DeleteNotify = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:8081/${deleteData?.comp}/delete/${deleteData?.data?.id}`,
+        `http:///${deleteData?.comp}/delete/${deleteData?.data?.id}`,
         {
           headers: {
             ContentType: "application/json",

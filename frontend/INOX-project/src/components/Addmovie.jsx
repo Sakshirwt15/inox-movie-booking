@@ -29,7 +29,7 @@ const Addmovie = () => {
 
   const handleSave = async () => {
     try {
-      await axios.post("http://localhost:8081/movies/save", formData, {
+      await axios.post("http:///movies/save", formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("auth")}`,
         },

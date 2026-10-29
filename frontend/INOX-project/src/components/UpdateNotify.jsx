@@ -22,7 +22,7 @@ const UpdateNotify = () => {
     setupdateNotify(false);
     try {
       const response = await axios.put(
-        `http://localhost:8081/${updateData?.comp}/update`,
+        `http:///${updateData?.comp}/update`,
         updateData?.data,
         {
           headers: {

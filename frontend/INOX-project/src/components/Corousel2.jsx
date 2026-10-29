@@ -46,9 +46,7 @@ const Corousel2 = () => {
 
     const fetchMovies = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:8081/open/movies/alls",
-        );
+        const response = await axios.get("http:///open/movies/alls");
         console.log(response.data);
         setMovies(response.data);
       } catch (error) {

@@ -42,10 +42,8 @@ const ShowTimings = () => {
       try {
         let response = await axios.get(
           state != null
-            ? `http://localhost:8081/open/cinemas/${
-                state?.moviename || state?.movie
-              }`
-            : `http://localhost:8081/open/cinemas/alls`,
+            ? `http:///open/cinemas/${state?.moviename || state?.movie}`
+            : `http:///open/cinemas/alls`,
         );
         setAllTheater(response.data);
       } catch (error) {

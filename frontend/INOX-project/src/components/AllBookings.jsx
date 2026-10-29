@@ -11,7 +11,7 @@ const AllBookings = () => {
     const fetchTickets = async () => {
       const token = localStorage.getItem("auth"); // Get auth token from localStorage
       try {
-        const response = await axios.get("http://localhost:8081/ticket/all", {
+        const response = await axios.get("http:///ticket/all", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -31,14 +31,11 @@ const UpdateTheatre = () => {
   };
 
   let fetchTheater = async () => {
-    const response = await axios.get(
-      `http://localhost:8081/theater/${theaterId}`,
-      {
-        headers: {
-          Authorization: ` Bearer ${localStorage.getItem("auth")}`,
-        },
+    const response = await axios.get(`http:///theater/${theaterId}`, {
+      headers: {
+        Authorization: ` Bearer ${localStorage.getItem("auth")}`,
       },
-    );
+    });
     setTheatre(response.data);
   };
   // Handle form submission to update the theatre details

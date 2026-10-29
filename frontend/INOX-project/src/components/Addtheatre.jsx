@@ -25,15 +25,11 @@ const Addtheatre = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
     try {
-      const response = await axios.post(
-        "http://localhost:8081/theater/save",
-        theatre,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("auth")}`,
-          },
+      const response = await axios.post("http:///theater/save", theatre, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("auth")}`,
         },
-      );
+      });
       console.log("Theater added successfully:", response.data);
       toast.success("Theater Added Successfully");
       setUpdateCount(updateCount + 1);

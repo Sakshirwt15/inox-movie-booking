@@ -40,7 +40,7 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8081/auth/login?email=${user.email}&password=${user.password}`,
+        `http:///auth/login?email=${user.email}&password=${user.password}`,
       );
       console.log("User authenticated:", response.data);
       let token = response.data.token;

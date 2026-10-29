@@ -40,7 +40,7 @@ const Cinemas = () => {
   };
 
   let fetchCinemas = async () => {
-    let { data } = await axios.get("http://localhost:8081/open/cinemas/alls");
+    let { data } = await axios.get("http:///open/cinemas/alls");
     console.log(data);
     data.map((ele) => {
       fetchCinemaImage(ele.id);
@@ -48,9 +48,7 @@ const Cinemas = () => {
     setAllTheatres(data);
   };
   let fetchCinemaImage = async (id) => {
-    let { image } = await axios.get(
-      `http://localhost:8081/open/location/${id}`,
-    );
+    let { image } = await axios.get(`http:///open/location/${id}`);
     console.log(image);
     setAllImages([...allImages, image]);
   };

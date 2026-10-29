@@ -33,7 +33,7 @@ const QuickBookNav = () => {
 
   const handleMovieData = async () => {
     try {
-      let { data } = await axios.get("http://localhost:8081/open/movies/alls");
+      let { data } = await axios.get("http:///open/movies/alls");
       setFetchedMovieData(Array.isArray(data) ? data : []); // Fetch and set movie data
     } catch {
       setFetchedMovieData([]);
@@ -43,7 +43,7 @@ const QuickBookNav = () => {
 
   const handleCinemaData = async () => {
     try {
-      let { data } = await axios.get("http://localhost:8081/open/cinemas/alls");
+      let { data } = await axios.get("http:///open/cinemas/alls");
       setFetchedCinemaData(Array.isArray(data) ? data : []); // Fetch and set cinema data
     } catch {
       setFetchedCinemaData([]);

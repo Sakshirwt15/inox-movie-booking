@@ -29,10 +29,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "http://localhost:8081/auth/signup",
-        user,
-      );
+      const response = await axios.post("http:///auth/signup", user);
       console.log("User created:", response.data);
       // Navigate to login page after successful signup
       toast.success("Signup Up Succesfully");

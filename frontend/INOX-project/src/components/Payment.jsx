@@ -26,7 +26,7 @@ const Payment = () => {
     console.log(ticketData);
     console.log(state);
     axios
-      .post("http://localhost:8081/ticket/save", ticketData, {
+      .post("http:///ticket/save", ticketData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("auth")}`,
         },

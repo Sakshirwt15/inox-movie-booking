@@ -25,7 +25,7 @@ const AddShows = () => {
   useEffect(() => {
     const fetchTheaters = async () => {
       try {
-        const response = await axios.get("http://localhost:8081/theater/all", {
+        const response = await axios.get("http:///theater/all", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -40,7 +40,7 @@ const AddShows = () => {
     const fetchMovies = async () => {
       console.log(token);
       try {
-        const response = await axios.get("http://localhost:8081/movies/all", {
+        const response = await axios.get("http:///movies/all", {
           headers: {
             Authorization: ` Bearer ${token}`,
           },
@@ -90,15 +90,11 @@ const AddShows = () => {
   useEffect(() => {
     const fetchTheaters = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:8081/theater/all",
-          showDetails,
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("auth")}`,
-            },
+        const response = await axios.get("http:///theater/all", showDetails, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("auth")}`,
           },
-        ); // Replace with your API endpoint
+        }); // Replace with your API endpoint
         // const data = await response.json();
         setTheaters(response.data); // Assuming data is an array of theaters
       } catch (error) {
@@ -111,7 +107,7 @@ const AddShows = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get("http://localhost:8081/movies/all", {
+        const response = await axios.get("http:///movies/all", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("auth")}`,
           },
@@ -128,7 +124,7 @@ const AddShows = () => {
     e.preventDefault();
     // try {
     //   console.log(localStorage.getItem("auth"))
-    //   const response = await axios.post("http://localhost:8081/show/save",showDetails,
+    //   const response = await axios.post("http:///show/save",showDetails,
     //     {
     //       headers: {
     //         Authorization:`Bearer ${localStorage.getItem("auth")}`
@@ -153,7 +149,7 @@ const AddShows = () => {
 
       try {
         const response = await axios.post(
-          `http://localhost:8081/show/save/${showDetails.theater.id}/${showDetails.movie.id}`,
+          `http:///show/save/${showDetails.theater.id}/${showDetails.movie.id}`,
           payload,
           {
             headers: {
@@ -202,7 +198,7 @@ const AddShows = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:8081/show/delete/${showIdToDelete}`,
+        `http:///show/delete/${showIdToDelete}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

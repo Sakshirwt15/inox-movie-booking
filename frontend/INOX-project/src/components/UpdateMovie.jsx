@@ -40,7 +40,7 @@ const UpdateMovie = () => {
       let token = localStorage.getItem("auth");
       try {
         const response = await axios.get(
-          `http://localhost:8081/movies/find/${updateData?.data?.id}`,
+          `http:///movies/find/${updateData?.data?.id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`, // Include token in the headers
